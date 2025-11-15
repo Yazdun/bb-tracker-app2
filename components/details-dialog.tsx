@@ -19,26 +19,28 @@ export function DetailsDialog({ data, idx }: { data: TData; idx: number }) {
     if (data.component) {
       return (
         <DialogContent className="p-0 md:max-w-5xl">
-          <ScrollArea className="md:h-[600px] p-5 h-[calc(100vh-100px)]">
-            <DialogHeader className="gap-2 flex-row flex items-start justify-start text-center">
-              <DialogTitle>
-                Day {idx + 1}{" "}
-                <span className="text-muted-foreground font-light">
-                  / {dayjs(data.date).format("MMMM DD, YYYY")}
-                </span>
-              </DialogTitle>
-            </DialogHeader>
-            <div className="mt-5">
-              <div>
-                <div>⌛ Time Spent: {(timeSpent / 60).toFixed(2)} hours</div>
-                <span>
-                  💰 Money Earned: {formatUSD(data.bountiesEarned ?? 0)}
-                </span>
+          <ScrollArea className="md:h-[600px] h-[calc(100vh-100px)]">
+            <div className="p-5">
+              <DialogHeader className="gap-2 flex-row flex items-start justify-start text-center">
+                <DialogTitle>
+                  Day {idx + 1}{" "}
+                  <span className="text-muted-foreground font-light">
+                    / {dayjs(data.date).format("MMMM DD, YYYY")}
+                  </span>
+                </DialogTitle>
+              </DialogHeader>
+              <div className="mt-5">
+                <div>
+                  <div>⌛ Time Spent: {(timeSpent / 60).toFixed(2)} hours</div>
+                  <span>
+                    💰 Money Earned: {formatUSD(data.bountiesEarned ?? 0)}
+                  </span>
+                </div>
+
+                <hr className="my-5" />
+
+                {data.component}
               </div>
-
-              <hr className="my-5" />
-
-              {data.component}
             </div>
           </ScrollArea>
         </DialogContent>
