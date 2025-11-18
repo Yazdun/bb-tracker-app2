@@ -31,7 +31,9 @@ export function DetailsDialog({ data, idx }: { data: TData; idx: number }) {
               </DialogHeader>
               <div className="mt-5">
                 <div>
-                  <div>⌛ Time Spent: {(timeSpent / 60).toFixed(2)} hours</div>
+                  <div>
+                    ⌛ Time Spent: {(timeSpent / 60).toFixed(2)} hour(s)
+                  </div>
                   <span>
                     💰 Money Earned: {formatUSD(data.bountiesEarned ?? 0)}
                   </span>

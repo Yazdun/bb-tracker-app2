@@ -1,5 +1,6 @@
 import React from "react";
 import { Day1 } from "./days/day1";
+import { Day2 } from "./days/day2";
 
 export type TData = {
   date: string | null;
@@ -16,10 +17,10 @@ export const data: TData[] = [
     component: <Day1 />,
   },
   {
-    date: null,
-    timeSpent: null,
+    date: "2025/11/17",
+    timeSpent: 60,
     bountiesEarned: 0,
-    component: null,
+    component: <Day2 />,
   },
   {
     date: null,
