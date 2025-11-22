@@ -11,16 +11,16 @@ export type TData = {
 
 export const data: TData[] = [
   {
-    date: "2025/11/16",
-    timeSpent: 180,
+    date: null,
+    timeSpent: null,
     bountiesEarned: 0,
-    component: <Day1 />,
+    component: null,
   },
   {
-    date: "2025/11/17",
-    timeSpent: 60,
+    date: null,
+    timeSpent: null,
     bountiesEarned: 0,
-    component: <Day2 />,
+    component: null,
   },
   {
     date: null,
